@@ -1,0 +1,61 @@
+#sect1 {
+    
+    background-image:url("./imgBack.jpg") ;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+#img{
+    display: inline-flex;
+}
+.coin-logo{
+    width: fit-content;
+    height: fit-content;
+}
+p{
+    background-color: white;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px;
+    border-radius: 10px;
+}
+h1{
+    background-color: #fff;
+    width: fit-content;
+    padding:10px;
+    border-radius: 10px;
+    font-size: small;
+    font-weight: 100;
+}
+
+table {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 5%;
+    
+}
+
+th {
+    height: 50px;
+}
+td{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+    text-align: center;
+    width: auto;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1387d5;
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: large;
+}

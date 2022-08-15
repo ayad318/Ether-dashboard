@@ -1,0 +1,24 @@
+#sect1 {
+
+    background-image: url("./aboutUsback.jpg");
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.card{
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px;
+    border-radius: 20px;
+
+}
+h1{
+    text-align: center;
+}
+p{
+    font-size: large;
+}

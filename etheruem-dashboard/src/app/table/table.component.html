@@ -1,0 +1,47 @@
+<div id="sect1">
+
+
+        <h1 *ngIf="this.efl_balance>=0" style="margin-left: 200px; font-size: x-large; font-weight: bolder;">EFL balance: {{efl_balance}}</h1>
+        <h1 *ngIf="this.efl_balance<0" style="margin-left: 200px; font-size: x-large; font-weight: bolder;">EFL balance:
+            0</h1>
+
+    
+    <table *ngIf="this.isConnected()">
+        <thead>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let token of tokens">
+                <td>
+                    <div>
+                        <a href="" style="color: black;">
+                            <div id="img">
+                                <img class="coin-logo" src={{token.src_img}} alt="">
+                                <p>{{token.name}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    {{token.balance.toFixed(3)}}
+                </td>
+                <td>
+                    {{(token.balance*token.price).toFixed(3)}} USD$
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <p *ngIf="this.efl_balance<10&& this.efl_balance>=0 && this.isConnected()" class="subscribe">
+        please by at least 10 EFL to use the full version!!!
+        <br>
+        <br>
+        EFL contract addres:0x14Cd97748dCd3dB4B2DcAaBB9FF2132701C14339
+        on Rinkeby network.
+        <br>
+        Can be found on:
+        <a href="https://rinkeby.etherscan.io/address/0x14Cd97748dCd3dB4B2DcAaBB9FF2132701C14339">https://rinkeby.etherscan.io/address/0x14Cd97748dCd3dB4B2DcAaBB9FF2132701C14339</a>
+    </p>
+</div>

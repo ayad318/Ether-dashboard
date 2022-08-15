@@ -1,0 +1,23 @@
+<nav>
+    <a routerLink="/">
+        <h1 class="navbar-logo">
+            Logo
+        </h1>
+    </a>
+    <div class="menu-icon" (click)="handleclick()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">{{this.nav_icon}}</mat-icon>
+    </div>
+    <ul class={{nav_menu}}>
+
+        <li *ngFor="let item of menu">
+            <a class={{item.className}} routerLink="{{item.url}}">
+                {{item.title}}
+            </a>
+        </li>
+    </ul>
+    <Button (click)="connect()" *ngIf="!isConnected()">Connect Wallet</Button>
+    <div *ngIf="isConnected()">
+        <p style="color:white;">{{getAccount().substring(0,5)}}&#8230;{{getAccount().substring(39,42)}}</p>
+        <u style="color:white " (click)="disconnect()"> disconnect</u>
+    </div>
+</nav>
